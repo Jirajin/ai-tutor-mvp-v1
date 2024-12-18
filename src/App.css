@@ -1,0 +1,192 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Neue', sans-serif; /* Playful and elegant font */
+  background-color: #0B0F0D; /* Dark blackish-green background */
+  color: #D4EBD1; /* Soft green for text */
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Messages Section */
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between messages */
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 520px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #131313; /* Optional background for the chatbox */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.messages::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, Edge */
+}
+.root {
+  background-color: #234F42;
+}
+.messages .userMsg,
+.messages .responseMsg {
+  padding: 15px 20px;
+  border-radius: 20px;
+  max-width: 70%;
+  font-size: 16px;
+  line-height: 1.5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.messages .userMsg {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #1A3A30, #234F42); /* Dark green gradient */
+  color: #D4EBD1; /* Soft green for text */
+  box-shadow: 0 4px 8px rgba(26, 58, 48, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.messages .userMsg:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(26, 58, 48, 0.6), 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.messages .responseMsg {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #122920, #1E3A33); /* Slightly darker green gradient */
+  color: #A8C4AD; /* Lighter green for contrast */
+  box-shadow: 0 4px 8px rgba(18, 41, 32, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.messages .responseMsg:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(18, 41, 32, 0.6), 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Box */
+.inputBox {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #0D1D19, #152825); /* Dark blackish-green gradient */
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.inputBox input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #D4EBD1;
+  font-size: 16px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.inputBox input::placeholder {
+  color: #586E63; /* Subtle placeholder color */
+}
+
+.inputBox i {
+  color: #A8C4AD; /* Lighter green for the send icon */
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.inputBox i:hover {
+  color: #D4EBD1; /* Brighter green on hover */
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #112821, #19352E);
+  color: #D4EBD1;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(25, 53, 46, 0.6), 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  font-weight: bolder;
+  color: #D4EBD1; /* Bright green for headings */
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .messages {
+    padding: 20px 5%;
+  }
+
+  .messages .userMsg,
+  .messages .responseMsg {
+    max-width: 80%;
+  }
+
+  .inputBox {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .messages .userMsg,
+  .messages .responseMsg {
+    max-width: 90%;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  h1, h2 {
+    font-size: 24px;
+  }
+
+  button {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .messages .userMsg,
+  .messages .responseMsg {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .inputBox {
+    padding: 6px 8px;
+  }
+}
