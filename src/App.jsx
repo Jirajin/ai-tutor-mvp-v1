@@ -139,8 +139,7 @@ const App = () => {
           )}
         </div>
         <p className="text-gray-500 text-sm mt-4">
-          AssistMe is developed by Mo. Mahdi Farooqui. This AI uses the Gemini API for giving the
-          response.
+          WARNING: This is a MVP(minimum viable product). The UI and responses can be problematic.
         </p>
       </div>
     </div>
